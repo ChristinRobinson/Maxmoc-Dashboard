@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Maxmoc Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+
+  <body>
+    <!-- Sidebar Start -->
+    <nav id="sidebar" class="sidebar">
+      <div class="logo">
+        <img src="./assets/svg/maxmoc-logo-light.svg" alt="">
+      </div>
+      <ul class="nav-links">
+        <li class=" active">
+          <div class="nav-item">
+            <img src="./assets/svg/connection-network-management.svg" alt="">
+            <span class="link-name">Connection Network Management</span>
+          </div>
+          <div class="status"></div>
+        </li>
+        <li>
+          <div class="nav-item">
+            <img src="./assets/svg/maps-calibration.svg" alt="">
+            <span class="link-name">Maps Calibration</span>
+          </div>
+          <div class="status"></div>
+        </li>
+        <li>
+          <div class="nav-item">
+            <img src="./assets/svg/measurement.svg" alt="">
+            <span class="link-name">Measurement</span>
+          </div>
+          <div class="status"></div>
+        </li>
+        <li>
+          <div class="nav-item">
+            <img src="./assets/svg/diagnostics.svg" alt="">
+            <span class="link-name">Diagnostics</span>
+          </div>
+          <div class="status"></div>
+        </li>
+      </ul>
+    </nav>
+    <!-- Sidebar End -->
+
+    <!-- Header Start -->
+    <header id="header" class="header">
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="header-content">
+        <div class="search-container">
+          <input type="text" name="search-box" id="search-box" class="search-box" placeholder="Search">
+          <label for="search-box"><img src="./assets/svg/search.svg" alt=""></label>
+        </div>
+        <div class="adapter-container">
+          <div class="pla active">Peak Light Adapter</div>
+          <div class="can">CAN Adapter</div>
+        </div>
+        <div class="language-container">
+          <label for="language-select">Language</label>
+          <select name="language-select" id="language-select" class="language-select">
+            <option value="english">English</option>
+            <option value="tamil">Tamil</option>
+            <option value="hindi">Hindi</option>
+            <option value="kannada">Kannada</option>
+          </select>
+        </div>
+      </div>
+
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <main id="main" class="main">
+
+
+      <!-- Main > Connection Network Management Start -->
+      <section id="connection-network-management" class="connection-network-management">
+        <div class="title">
+          <h2>ECU's connected in the vehicle</h2>
+        </div>
+
+        <div class="info-table">
+          <div class="info-table__head">
+            <div class="name">Name</div>
+            <div class="address">Address</div>
+            <div class="arb-address-capable">Arb. Address Capable</div>
+            <div class="industry-group">Industry Group</div>
+            <div class="vehicle-system">Vehicle System</div>
+            <div class="function">Function</div>
+            <div class="vehicle-system-instance">Vehicle System Instance</div>
+            <div class="function-instance">Function Instance</div>
+            <div class="ecu-instance">ECU Instance</div>
+            <div class="manufacturer-code">Manufacturer Code</div>
+            <div class="identity">Identity</div>
+          </div>
+          <div class="rows row-1">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-2">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-3">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-4">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-5">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-6">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-7">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-8">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-9">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-10">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-11">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-12">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-13">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-14">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-15">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+          <div class="rows row-16">
+            <div class="column-1 name"></div>
+            <div class="column-2 address"></div>
+            <div class="column-3 arb-address-capable"></div>
+            <div class="column-4 industry-group"></div>
+            <div class="column-5 vehicle-system"></div>
+            <div class="column-6 function"></div>
+            <div class="column-7 vehicle-system-instance"></div>
+            <div class="column-8 function-instance"></div>
+            <div class="column-9 ecu-instance"></div>
+            <div class="column-10 manufacturer-code"></div>
+            <div class="column-11 identity"></div>
+          </div>
+        </div>
+
+        <div class="firmware-settings">
+          <div class="firmware-settings__box-heading">
+            <div class="firmware active"><button class="btn">Firmware</button></div>
+            <div class="settings"><button class="btn">Settings</button></div>
+          </div>
+          <div class="firmware-settings__content">
+            <input type="text" name="part-number" id="part-number" class="part-number" placeholder="Part Number">
+            <input type="text" name="seriel-number" id="seriel-number" class="seriel-number"
+              placeholder="Seriel Number">
+          </div>
+        </div>
+        <div class="firmware-version">
+          <div class="firmware-version__box-heading">
+            <label for="firmware-version">Firmware version</label>
+            <input type="text" name="firmware-version" id="firmware-version" maxlength="19" placeholder="19 characters">
+          </div>
+          <div class="firmware-version__content">
+            <div class="name-tab">Name</div>
+            <div class="value-tab">Value</div>
+            <div class="length-tab">Length</div>
+            <div class="name-details"></div>
+            <div class="value-details"></div>
+            <div class="length-details"></div>
+          </div>
+        </div>
+        <div class="table-buttons-section">
+          <button class="connect-find-ecu btn btn-success">Connect, Find ECU</button>
+          <button class="log btn btn-warning">Log</button>
+        </div>
+      </section>
+      <!-- Main > Connection Network Management End -->
+
+      <!-- Main > Maps Calibration Start -->
+      <section id="maps-calibration" class="maps-calibration">
+        <div class="title">
+          <h2>Motor Map</h2>
+        </div>
+        <div class="axis-selection-panel">
+          <div class="x-axis-select">
+            <label for="axis-x">Axis X</label>
+            <select name="axis-x" id="axis-x" class="axis-x"></select>
+          </div>
+          <div class="y-axis-select">
+            <label for="axis-y">Axis Y</label>
+            <select name="axis-y" id="axis-y" class="axis-y"></select>
+          </div>
+          <div class="axis-select-chosen">
+            Chosen : <span></span>
+          </div>
+        </div>
+        <div class="axis-table-control">
+          <div class="axis-table">
+            <div class="axis-table-display">
+              <div class="map-cancel-button"><span>Cancel Selection</span></div>
+              <div class="x-axis-bar"><span>Axis X :</span></div>
+              <div class="y-axis-bar"><span>Axis Y :</span></div>
+              <div class="axis-display"></div>
+            </div>
+            <div class="axis-table-buttons-group">
+              <button class="graph-button btn btn-warning">Graph</button>
+              <div class="axis-sheets-button-group">
+                <div class="sheet-buttons">
+                  <div class="rpm active">RPM (rpm)</div>
+                  <div class="temperature"><span></span>Temperatue</div>
+                  <div class="pressure"><span></span>Pressure</div>
+                  <div class="delta-pressure"><span></span>Delta Pressure</div>
+                </div>
+                <div class="axis-sheet-control-buttons">
+                  <button class="read-map btn btn btn-warning">Read map with axis from ECU</button>
+                  <button class="active-work-map btn btn-warning">
+                    Active work map in RAM
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="operation-controls">
+            <div class="large-buttons-group">
+              <div class="precise-map">Precise Map Configuration From ECU</div>
+              <div class="read-chosen-version">Read Chosen Version of all maps from ECU</div>
+            </div>
+            <div class="small-buttons-group">
+              <div class="write-to-ecu">Write to ECU</div>
+              <div class="read-to-ecu">Read to ECU</div>
+              <div class="save-to-file">Save to file</div>
+              <div class="load-from-file">Load from file</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Main > Maps Calibration End -->
+
+      <!-- Main > Measurement Start -->
+      <section id="measurement-broadcast" class="measurement-broadcast">
+        <div class="title">
+          <h2>Measurement - Broadcast</h2>
+        </div>
+        <div class="broadcast-table">
+          <div class="broadcast-table__head">
+            <div class="log">Log</div>
+            <div class="name">Name</div>
+            <div class="pgn">PGN</div>
+            <div class="spn">SPN</div>
+            <div class="current-value">Current Value</div>
+            <div class="state-of-control">State of Control</div>
+            <div class="default-value">Default Value</div>
+            <div class="manual-value">Manual Value</div>
+            <div class="freeze-value">Freeze Value</div>
+          </div>
+          <!-- Table Row 1 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 2 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 3 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 4 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 5 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 6 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 7 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 8 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 9 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 10 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 11 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 12 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 13 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 14 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+          <!-- Table Row 15 -->
+          <div class="broadcast-table__row">
+            <div class="column-1 log"></div>
+            <div class="column-2 name"></div>
+            <div class="column-3 pgn"></div>
+            <div class="column-4 spn"></div>
+            <div class="column-5 current-value"></div>
+            <div class="column-6 state-of-control"></div>
+            <div class="column-7 default-value"></div>
+            <div class="column-8 manual-value"></div>
+            <div class="column-9 freeze-value"></div>
+          </div>
+        </div>
+        <div class="broadcast-buttons-group">
+          <div class="broadcast-table__right-corner-buttons-group">
+            <button class="btn btn-success">Start Broadcast</button>
+            <button class="btn btn-danger">Stop Broadcast</button>
+            <button class="btn btn-warning">Set Value</button>
+          </div>
+          <div class="broadcast-table__left-corner-buttons-group">
+            <label for="interval1">Interval</label>
+            <input type="number" name="interval1" id="interval1" class="interval1">
+            <button class="btn btn-warning">Log</button>
+            <button class="btn btn-warning">Graph</button>
+          </div>
+        </div>
+      </section>
+      <section id="measurement-proprietary" class="measurement-proprietary show">
+        <div class="title">
+          <h2>Measurement - Proprietary</h2>
+        </div>
+        <div class="table-operation-buttons-group">
+          <div class="save">
+            <img src="./assets/svg/save.svg" alt="">
+            <span>Save</span>
+          </div>
+          <div class="load">
+            <img src="./assets/svg/load.svg" alt="">
+            <span>Load</span>
+          </div>
+          <div class="switch-all">
+            <img src="./assets/svg/switch.svg" alt="">
+            <span>Switch All</span>
+          </div>
+          <div class="select-all">
+            <img src="./assets/svg/select-all.svg" alt="">
+            <span>Select All</span>
+          </div>
+          <div class="cancel-all">
+            <img src="./assets/svg/cancel-all.svg" alt="">
+            <span>Cancel All</span>
+          </div>
+        </div>
+        <div class="proprietary-left-table">
+          <div class="proprietary-table">
+            <!-- Table head -->
+            <div class="proprietary-table__head">
+              <div class="head-column-1 measure">
+                <span>Meassure</span>
+              </div>
+              <div class="head-column-2 log">
+                <span>Log</span>
+              </div>
+              <div class="head-column-3 measure-item">
+                <span>Measure Item</span>
+              </div>
+              <div class="head-column-4 freeze">
+                <span>Freeze</span>
+              </div>
+              <div class="head-column-5 current value">
+                <span>Current Value</span>
+              </div>
+              <div class="head-column-6 state-of-control">
+                <span>State of Control</span>
+              </div>
+            </div>
+            <!-- Table Row 1 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 2 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 3 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 4 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 5 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 6 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 7 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 8 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 9 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 10 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 11 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 12 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 13 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+          </div>
+          <div class="proprietary-left-table__buttons">
+            <button class="btn btn-success">Start</button>
+            <button class="btn btn-danger">Stop</button>
+            <button class="btn btn-warning">Set Value</button>
+            <input type="number" name="interval2" id="interval2" class="interval2" placeholder="interval2">
+          </div>
+        </div>
+        <div class="proprietary-right-table">
+          <div class="proprietary-table">
+            <!-- Table head -->
+            <div class="proprietary-table__head">
+              <div class="head-column-1 measure">
+                <span>Meassure</span>
+              </div>
+              <div class="head-column-2 log">
+                <span>Log</span>
+              </div>
+              <div class="head-column-3 measure-item">
+                <span>Measure Item</span>
+              </div>
+              <div class="head-column-4 freeze">
+                <span>Freeze</span>
+              </div>
+              <div class="head-column-5 current value">
+                <span>Current Value</span>
+              </div>
+              <div class="head-column-6 state-of-control">
+                <span>State of Control</span>
+              </div>
+            </div>
+            <!-- Table Row 1 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 2 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 3 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 4 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 5 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 6 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 7 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 8 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 9 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 10 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 11 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 12 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+            <!-- Table Row 13 -->
+            <div class="proprietary-table__row">
+              <div class="column-1 measure"></div>
+              <div class="column-2 log"></div>
+              <div class="column-3 measure-item"></div>
+              <div class="column-4 freeze"></div>
+              <div class="column-5 current value"></div>
+              <div class="column-6 state-of-control"></div>
+            </div>
+          </div>
+          <div class="proprietary-right-table__buttons">
+            <label for="interval">Interval</label>
+            <input type="number" name="interval3" id="interval3" class="interval3" placeholder="interval3">
+            <button class="btn btn-warning">Log</button>
+            <button class="btn btn-warning">Graph</button>
+          </div>
+        </div>
+      </section>
+      <!-- Main > Measurement End -->
+
+      <!-- Main > Diagnostics Start -->
+      <section id="diagnostics" class="diagnostics">
+        <div class="diagnostics-left-table">
+          <div class="diagnostics-left-table__head">
+            <div class="spn">SPN</div>
+            <div class="spn-description">SPN Description</div>
+            <div class="fmi">FMI</div>
+            <div class="fmi-description">FMI Description</div>
+            <div class="occurence">Occurence</div>
+          </div>
+          <div class="diagnostics-left-table__body">
+            <div class="diagnostics-left-table__body-content">
+              <div class="rows row-1">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-2">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-3">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-4">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-5">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-6">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-7">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-8">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-9">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-10">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-11">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-12">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-13">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-14">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-15">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-16">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+            </div>
+          </div>
+          <div class="diagnostics-left-table__buttons">
+            <span>DM1</span>
+          </div>
+        </div>
+        <div class="diagnostics-right-table">
+          <div class="diagnostics-right-table__head">
+            <div class="spn">SPN</div>
+            <div class="spn-description">SPN Description</div>
+            <div class="fmi">FMI</div>
+            <div class="fmi-description">FMI Description</div>
+            <div class="occurence">Occurence</div>
+          </div>
+          <div class="diagnostics-right-table__body">
+            <div class="diagnostics-right-table__body-content">
+              <div class="rows row-1">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-3">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-2">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-4">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-5">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-6">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-7">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-8">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-9">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-10">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-11">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-12">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-13">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-14">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-15">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+              <div class="rows row-16">
+                <div class="column-1 spn"></div>
+                <div class="column-2 spn-description"></div>
+                <div class="column-3 fmi"></div>
+                <div class="column-4 fmi-description"></div>
+                <div class="column-5 occurence"></div>
+              </div>
+            </div>
+          </div>
+          <div class="diagnostics-right-table__buttons">
+            <div class="dm2 active">
+              <span>DM2</span>
+            </div>
+            <div class="dm3">
+              <span></span><span>DM3</span>
+            </div>
+            <div class="dm4">
+              <span></span><span>DM4</span>
+            </div>
+            <div class="dm5">
+              <span></span><span>DM5</span>
+            </div>
+          </div>
+        </div>
+        <div class="status-box-container">
+          <div class="status-container">
+            <div class="status-box">
+              <div class="status-heading">
+                <span class="status-heading__status">Status</span>
+                <span class="status-heading__lamp">Lamp</span>
+                <span class="status-heading__flash">Flash</span>
+              </div>
+              <div class="status-mil status-sub-heading">
+                <label for="mil" class="status-sub-heading">MIL</label>
+                <input type="number" name="mil" id="mil" class="mil-value">
+                <span class="na-button">NA</span>
+                <span class="na-button">NA</span>
+              </div>
+              <div class="status-awl">
+                <label for="awl" class="status-sub-heading">AWL</label>
+                <input type="number" name="awl" id="awl" class="awl-value">
+                <span class="na-button">NA</span>
+                <span class="na-button">NA</span>
+              </div>
+              <div class="status-rsl">
+                <label for="rsl" class="status-sub-heading">RSL</label>
+                <input type="number" name="rsl" id="rsl" class="rsl-value">
+                <span class="na-button">NA</span>
+                <span class="na-button">NA</span>
+              </div>
+              <div class="status-pl">
+                <label for="pl" class="status-sub-heading">PL</label>
+                <input type="number" name="pl" id="pl" class="pl-value">
+                <span class="na-button">NA</span>
+                <span class="na-button">NA</span>
+              </div>
+            </div>
+            <div class="alert">*NA - Not Available</div>
+          </div>
+          <button class="btn btn-warning">DM 3 - Clear DTC</button>
+        </div>
+      </section>
+      <!-- Main > Diagnostics End -->
+
+
+    </main>
+    <!-- Main End -->
+
+    <script src="./js/index.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,1159 @@
+/* 
+================
+Global Variables 
+================
+*/
+
+:root {
+  --bg-danger: #F02925;
+  --bg-main: #F7F7F7;
+  --bg-primary: #215093;
+  --bg-primary-1: #215093;
+  --bg-primary-2: #375692;
+  --bg-secondary: #eeeeee;
+  --bg-success: #ABD043;
+  --bg-warning: #F0BB40;
+  --bg-white: #FFFFFF;
+
+  --clr-dark: #3B3B3B;
+  --clr-muted: #707070;
+  --clr-primary: #15397F;
+  --clr-white: #FFFFFF;
+
+  --bs-5-5-10: 5px 5px 10px #00000041;
+  --bs-10-10-20: 10px 10px 20px #00000007;
+}
+
+/* 
+==============
+Global Classes
+==============
+*/
+.alert {
+  color: #F02925;
+}
+.btn {
+  height: 30px;
+  min-width: 75px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn-danger {
+  background-color: var(--bg-danger);
+  color: var(--clr-white);
+}
+.btn-success {
+  background-color: var(--bg-success);
+}
+.btn-warning {
+  background-color: var(--bg-warning);
+}
+.title {
+  color: var(--bg-primary);
+}
+.overflow-area {
+  overflow: auto;
+}
+/* 
+==========
+Custom CSS
+==========
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+  ;
+}
+input, button, select {
+  border: none;
+  outline: none;
+}
+input[type='number'] {
+  height: 30px;
+  width: 75px;
+  padding: 5px;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border-radius: 30px;
+  border: 2px solid var(--bg-warning);
+}
+h2 {
+  font-size: 1.75rem;
+}
+table {
+  border-collapse: collapse;
+  overflow: auto;
+}
+/* Sidebar Start */
+.sidebar {
+  grid-area: sidebar;
+  width: 120px;
+  background-color: var(--bg-primary);
+  position: relative;
+  transition: all 0.4s ease-in;
+}
+.sidebar .logo {
+  height: 100px;
+  background-color: var(--bg-primary);
+  text-align: center;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+.sidebar .logo img {
+  height: 60px;
+  transition: 0.3s ease-in-out;
+}
+.sidebar .nav-links {
+  padding-left: 30px;
+}
+.sidebar .nav-links li {
+  margin-bottom: 30px;
+  margin-left: -30px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+.sidebar .nav-links li .nav-item {
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.sidebar .nav-links li .nav-item .link-name {
+  font-weight: 500;
+  display: none;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.sidebar .nav-links li .status {
+  height: 50px;
+  width: 8px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li .nav-item img {
+  height: 50px;
+  width: 50px;
+  background-color: #fff3;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.sidebar .nav-links li .nav-item img:hover {
+  background-color: #fff5;
+}
+.sidebar .nav-links li.active .nav-item img {
+  background-color: var(--bg-warning);
+  padding: 5px;
+  cursor: default;
+}
+/* Sidebar Open */
+
+.sidebar.open {
+  width: 240px;
+}
+.sidebar.open .logo {
+  height: 100px;
+}
+.sidebar.open .logo img {
+  height: 100%;
+}
+.sidebar.open .nav-links {
+  padding-left: 30px;
+}
+.sidebar.open .nav-links li {
+  margin-left: 0px;
+  background-color: #fff3;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.sidebar.open .nav-links li.active {
+  cursor: default;
+}
+.sidebar.open .nav-links li .nav-item img {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  margin-right: 5px;
+  padding: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.sidebar.open .nav-links li:hover {
+  background-color: #fff5;
+}
+.sidebar.open .nav-links li.active .nav-item img {
+  background-color: transparent;
+}
+.sidebar.open .nav-links li .nav-item .link-name {
+  transform: translateX(0);
+  display: block;
+  transform: translateX(0);
+  opacity: 1;
+}
+.sidebar.open .nav-links li.active .status {
+  background-color: #F0BB40;
+  display: block;
+  opacity: 1;
+}
+/* Sidebar End */
+
+/* Header Start */
+.header {
+  grid-area: header;
+  background-color: var(--bg-white);
+  padding: 10px 50px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 1rem;
+}
+.header .hamburger {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header .hamburger div {
+  height: 3px;
+  width: 100%;
+  background-color: #3B3B3B;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.header .hamburger div:after, .header .hamburger div::before {
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: #3B3B3B;
+  border-radius: 2px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.header .hamburger div::after {
+  transform: translateY(-7px);
+}
+.header .hamburger div::before {
+  transform: translateY(7px);
+}
+.header .hamburger.open div {
+  transform: translateX(-50%);
+  background-color: transparent;
+}
+.header .hamburger.open div::after {
+  transform: rotate(-45deg) translate(8px, 8px);
+}
+.header .hamburger.open div::before {
+  transform: rotate(45deg) translate(8px, -8px);
+}
+.header .search-container {
+  height: 40px;
+  max-width: 300px;
+  padding: 5px 15px;
+  background-color: var(--bg-secondary);
+  border-radius: 30px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.header .search-container .search-box {
+  background-color: transparent;
+  flex-grow: 1;
+}
+.header .search-container img {
+  height: 30px;
+  cursor: pointer;
+}
+.header .adapter-container {
+  height: 40px;
+  max-width: 280px;
+  padding: 8px 10px;
+  border-radius: 30px;
+  background-color: var(--bg-secondary);
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.header .adapter-container div {
+  height: 100%;
+  min-width: max-content;
+  padding: 0 10px;
+  text-align: center;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.header .adapter-container div.active {
+  background-color: var(--bg-primary-1);
+  color: var(--clr-white);
+  box-shadow: var(--bs-5-5-10);
+  cursor: default;
+}
+.header .language-container {
+  height: 40px;
+  max-width: max-content;
+  padding: 2px 2px 2px 10px;
+  border: 2px solid #eeeeee77;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.header .language-container .language-select {
+  height: 100%;
+  padding: 3px;
+  border-radius: 30px;
+  background-color: var(--bg-secondary);
+  flex-grow: 1;
+  cursor: pointer;
+}
+/* Header End */
+
+/* Main Start */
+.main {
+  grid-area: main;
+  background-color: var(--bg-main);
+  padding: 1rem 50px 30px 1rem;
+}
+.main>section {
+  height: 100%;
+}
+/* Main > Connection Network Start */
+.main .connection-network-management {
+  display: none;
+}
+.main .connection-network-management.show {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  grid-template-rows: max-content max-content 1fr 30px;
+  grid-template-areas:
+    "cnm-title cnm-title"
+    "cnm-table firmware-settings"
+    "cnm-table firmware-version"
+    "table-buttons-section table-buttons-section"
+  ;
+  gap: 1rem;
+}
+.main .connection-network-management .title {
+  grid-area: cnm-title;
+}
+.main .connection-network-management .info-table {
+  grid-area: cnm-table;
+  background-color: var(--bg-secondary);
+  padding: 5px;
+  display: grid;
+  grid-template-rows: max-content repeat(16, 1fr);
+  row-gap: 3px;
+  overflow: auto;
+}
+.main .connection-network-management .info-table>div {
+  display: grid;
+  grid-template-columns: minmax(40px, 0.5fr) repeat(8, minmax(53px, 1fr)) minmax(78px, 1.5fr) minmax(46px, 0.5fr);
+  column-gap: 3px;
+}
+.main .connection-network-management .info-table .info-table__head {
+  column-gap: 0;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.main .connection-network-management .info-table .info-table__head>div {
+  height: 100%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 3px;
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+}
+.main .connection-network-management .info-table .info-table__head>div:first-child {
+  border-left: 0;
+}
+.main .connection-network-management .info-table .info-table__head>div:last-child {
+  border-right: 0;
+}
+.main .connection-network-management .info-table .rows>div {
+  background-color: var(--bg-white);
+  border-radius: 5px;
+}
+.main .connection-network-management .info-table, .main .connection-network-management .firmware-settings, .main .connection-network-management .firmware-version {
+  border-radius: 5px;
+  box-shadow: var(--bs-10-10-20);
+}
+.main .connection-network-management .firmware-settings {
+  grid-area: firmware-settings;
+  background-color: var(--bg-secondary);
+  padding: 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px max-content;
+  grid-template-areas:
+    "firmware-settings__box-heading"
+    "firmware-settings__content"
+  ;
+  row-gap: 10px;
+  position: relative;
+}
+.main .connection-network-management .firmware-settings__box-heading {
+  grid-area: firmware-settings__box-heading;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "cnm-firmware cnm-settings"
+  ;
+  align-items: center;
+}
+.main .connection-network-management .firmware-settings__box-heading .firmware {
+  grid-area: cnm-firmware;
+  border-right: 1px solid #70707077;
+}
+.main .connection-network-management .firmware-settings__box-heading div {
+  padding: 0 10px;
+}
+.main .connection-network-management .firmware-settings__box-heading div button {
+  width: 100%;
+  color: var(--clr-muted);
+}
+.main .connection-network-management .firmware-settings__box-heading>div.active button {
+  background-color: var(--bg-white);
+  color: var(--clr-dark);
+  box-shadow: var(--bs-10-10-20);
+}
+.main .connection-network-management .firmware-settings__box-heading .settings {
+  grid-area: cnm-settings;
+  border-left: 1px solid #70707077;
+}
+.main .connection-network-management .firmware-settings__content {
+  grid-area: firmware-settings__content;
+}
+.main .connection-network-management .firmware-settings__content input {
+  height: 30px;
+  width: 100%;
+  margin: 6px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.main .connection-network-management .firmware-version {
+  grid-area: firmware-version;
+  max-height: 400px;
+  color: var(--clr-muted);
+  background-color: var(--bg-secondary);
+  padding: 6px;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  row-gap: 5px;
+}
+.main .connection-network-management .firmware-version .firmware-version__box-heading {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.main .connection-network-management .firmware-version .firmware-version__box-heading input {
+  height: 100%;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
+.main .connection-network-management .firmware-version .firmware-version__content {
+  border: 5px solid #fff;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+    "name-tab value-tab length-tab"
+    "name-details value-details length-details"
+  ;
+  align-items: center;
+  gap: 2px;
+}
+.main .connection-network-management .firmware-version .firmware-version__content>div {
+  height: 100%;
+  background-color: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .connection-network-management .firmware-version .firmware-version__content .name-tab {
+  grid-area: name-tab;
+  border: 0 1px 1px 0 solid;
+}
+.main .connection-network-management .firmware-version .firmware-version__content .name-details {
+  grid-area: name-details;
+}
+.main .connection-network-management .firmware-version .firmware-version__content .value-tab {
+  grid-area: value-tab;
+}
+.main .connection-network-management .firmware-version .firmware-version__content .value-details {
+  grid-area: value-details;
+}
+.main .connection-network-management .firmware-version .firmware-version__content .length-tab {
+  grid-area: length-tab;
+}
+.main .connection-network-management .firmware-version .firmware-version__content .length-details {
+  grid-area: length-details;
+}
+.main .connection-network-management .table-buttons-section {
+  grid-area: table-buttons-section;
+  grid-column-end: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Main > Connection Network End */
+
+/* Main > Maps Calibration Start */
+.main .maps-calibration {
+  display: none;
+}
+.main .maps-calibration.show {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  grid-template-rows: max-content 30px 1fr;
+  grid-template-areas:
+    "map-title map-title"
+    "axis-selection-panel axis-selection-panel"
+    "axis-table-control  axis-table-control"
+  ;
+  gap: 1.2rem;
+}
+.main .maps-calibration .title {
+  grid-area: map-title;
+}
+.main .maps-calibration .axis-selection-panel {
+  grid-area: axis-selection-panel;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 1rem;
+}
+.main .maps-calibration .axis-selection-panel .x-axis-select, .main .maps-calibration .axis-selection-panel .y-axis-select {
+  color: var(--clr-muted);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  text-align: center;
+}
+.main .maps-calibration .axis-selection-panel div select {
+  height: 30px;
+  border-radius: 5px;
+}
+.main .maps-calibration .axis-selection-panel .axis-select-chosen {
+  background-color: var(--bg-white);
+  color: var(--clr-primary);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .maps-calibration .axis-table-control {
+  grid-area: axis-table-control;
+
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 1fr 40px;
+  grid-template-areas:
+    "axis-table operation-controls"
+    "axis-table axis-table-buttons-group"
+  ;
+  column-gap: 1rem;
+}
+.main .maps-calibration .axis-table-control .axis-table {
+  grid-area: axis-table;
+  box-shadow: var(--bs-10-10-20);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 40px;
+  grid-template-areas:
+    "axis-table-display"
+    "axis-table-buttons-group"
+  ;
+  row-gap: 6px;
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-display {
+  grid-area: axis-table-display;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  grid-template-rows: 75px 1fr;
+  grid-template-areas:
+    "map-cancel-button x-axis-bar"
+    "y-axis-bar axis-display"
+  ;
+  gap: 1rem;
+  text-align: center;
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-display>div {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--bs-10-10-20);
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-display .map-cancel-button {
+  grid-area: map-cancel-button;
+  padding: 5px;
+  background-color: var(--bg-danger);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-display .x-axis-bar {
+  grid-area: x-axis-bar;
+  background-color: var(--bg-white);
+  color: var(--clr-muted);
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-display .y-axis-bar {
+  grid-area: y-axis-bar;
+  background-color: var(--bg-white);
+  color: var(--clr-muted);
+
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-display .y-axis-bar span {
+  transform: rotate(-90deg);
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-display .axis-display {
+  grid-area: axis-display;
+  background-color: var(--bg-white);
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-buttons-group {
+  grid-area: axis-table-buttons-group;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.graph-button {
+  min-width: 100%;
+}
+.main .maps-calibration .axis-table-control .axis-table .axis-table-buttons-group .axis-sheets-button-group, .sheet-buttons, .axis-sheet-control-buttons {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.axis-sheet-control-buttons {
+  gap: 0.5rem;
+
+}
+.sheet-buttons>div:nth-child(1) {
+  width: 90px;
+  margin-left: 0;
+  grid-template-columns: 1fr;
+  z-index: 4;
+}
+.sheet-buttons>div:nth-child(2) {
+  z-index: 3;
+}
+.sheet-buttons>div:nth-child(3) {
+  z-index: 2;
+}
+.sheet-buttons>div:nth-child(4) {
+  z-index: 1;
+}
+.sheet-buttons>div {
+  height: 40px;
+  width: 180px;
+  margin-left: -90px;
+  padding-right: 8px;
+  border-bottom-right-radius: 50px;
+  background-color: var(--bg-white);
+  color: var(--clr-muted);
+  box-shadow: var(--bs-10-10-20);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.sheet-buttons>div.active {
+  background-color: var(--bg-success);
+  color: var(--clr-dark);
+  cursor: default;
+}
+.main .maps-calibration .axis-table-control .operation-controls {
+  grid-area: operation-controls;
+  grid-row-end: 2;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "large-buttons-group"
+    "small-buttons-group"
+  ;
+  gap: 1rem;
+}
+.main .maps-calibration .axis-table-control .operation-controls .large-buttons-group {
+  grid-area: large-buttons-group;
+  height: 100%;
+  max-height: 180px;
+  width: 150px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1rem;
+}
+.main .maps-calibration .axis-table-control .operation-controls .small-buttons-group {
+  grid-area: small-buttons-group;
+  height: 150px;
+  width: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem 1rem;
+}
+.main .maps-calibration .axis-table-control .operation-controls div>div {
+  background-color: var(--bg-white);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: var(--bs-10-10-20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+/* Main > Maps Calibration End */
+
+/* Main > Measurement Start */
+
+/* Measurement - Broadcast */
+.main .measurement-broadcast {
+  display: none;
+}
+.main .measurement-broadcast.show {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr 30px;
+  grid-template-areas:
+    "broadcast-title"
+    "broadcast-table"
+    "broadcast-buttons-group"
+  ;
+  gap: 1rem;
+}
+.main .measurement-broadcast .title {
+  grid-area: broadcast-title;
+}
+.main .measurement-broadcast .broadcast-table {
+  grid-area: broadcast-table;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--bg-secondary);
+  display: grid;
+  grid-template-rows: max-content repeat(15, 1fr);
+  gap: 3px;
+  box-sizing: content-box;
+  overflow: auto;
+}
+.broadcast-table__head, .broadcast-table__row {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 1fr 3fr 1fr 1fr 1fr;
+  gap: 3px;
+}
+.broadcast-table__head {
+  margin-bottom: 3px;
+}
+.broadcast-table__head>div {
+  /* min-width: max-content; */
+  border-radius: 5px;
+  padding: 8px 3px;
+  background-color: var(--bg-primary-2);
+  color: var(--clr-white);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+.broadcast-table__row>div {
+  border-radius: 5px;
+  background-color: var(--bg-white);
+}
+.main .measurement-broadcast .broadcast-buttons-group {
+  grid-area: broadcast-buttons-group;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.broadcast-table__right-corner-buttons-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.broadcast-table__left-corner-buttons-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.broadcast-table__left-corner-buttons-group input[type='number'] {
+  height: 30px;
+  width: 75px;
+  padding: 5px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid var(--bg-warning);
+}
+/* Measurement - Proprietary */
+.main .measurement-proprietary {
+  display: none;
+}
+.main .measurement-proprietary.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(max-content, 100px) 1fr;
+  grid-template-areas:
+    "proprietary-title table-operation-buttons-group"
+    "proprietary-left-table proprietary-right-table"
+  ;
+  gap: 1rem;
+}
+.main .measurement-proprietary .title {
+  grid-area: proprietary-title;
+}
+.main .measurement-proprietary .table-operation-buttons-group {
+  grid-area: table-operation-buttons-group;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.table-operation-buttons-group>div {
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+  background-color: var(--bg-white);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.table-operation-buttons-group>div>img {
+  height: 35px;
+}
+.main .measurement-proprietary .proprietary-left-table, .main .measurement-proprietary .proprietary-right-table {
+  display: grid;
+  grid-template-rows: 1fr 30px;
+  row-gap: 1rem;
+}
+.main .measurement-proprietary .proprietary-left-table {
+  grid-area: proprietary-left-table;
+}
+.proprietary-left-table__buttons {
+  display: flex;
+  gap: 10px;
+}
+.proprietary-left-table__buttons button:nth-child(3), .proprietary-left-table__buttons input {
+  flex-grow: 1;
+}
+.main .measurement-proprietary .proprietary-right-table {
+  grid-area: proprietary-right-table;
+}
+.proprietary-table {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--bg-secondary);
+  display: grid;
+  grid-template-rows: repeat(14, 1fr);
+  gap: 3px;
+}
+.proprietary-table>div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(max-content, 0.5fr)) minmax(max-content, 3fr) minmax(max-content, 0.5fr) minmax(max-content, 1fr) minmax(max-content, 1fr);
+  gap: 3px;
+}
+.proprietary-table__head {
+  background-color: var(--bg-main);
+}
+.proprietary-table__head>div {
+  border-radius: 5px;
+  margin: 1px 1px 0 1px;
+  padding: 5px 3px;
+  background-color: var(--bg-primary-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.proprietary-table__head>div span {
+  color: var(--clr-white);
+  font-size: 11px;
+}
+.proprietary-table>.proprietary-table__row>div {
+  border-radius: 5px;
+  background-color: var(--bg-white);
+}
+.proprietary-right-table__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+/* Main > Measurement End */
+
+/* Main > Diagnostics Start */
+.main .diagnostics {
+  display: none;
+}
+.main .diagnostics.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr max-content;
+  grid-template-rows: 30px 1fr 40px;
+  grid-template-areas:
+    "diagnostics-left-table diagnostics-right-table status-box-container"
+    "diagnostics-left-table diagnostics-right-table status-box-container"
+    "diagnostics-left-table diagnostics-right-table status-box-container"
+  ;
+  column-gap: 1rem;
+}
+.main .diagnostics .diagnostics-left-table, .main .diagnostics .diagnostics-right-table {
+  display: grid;
+  grid-template-rows: 30px 1fr 40px;
+
+}
+.main .diagnostics .diagnostics-left-table {
+  grid-area: diagnostics-left-table;
+  overflow: auto;
+}
+.main .diagnostics .diagnostics-right-table {
+  grid-area: diagnostics-right-table;
+  overflow: auto;
+}
+.diagnostics-left-table__head, .diagnostics-left-table__body-content .rows, .diagnostics-right-table__head, .diagnostics-right-table__body-content .rows {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr 2fr 1fr;
+  gap: 3px;
+}
+.diagnostics-left-table__body, .diagnostics-right-table__body {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--bg-secondary);
+  display: grid;
+  grid-template-rows: 1fr;
+
+}
+.diagnostics-left-table__body-content, .diagnostics-right-table__body-content {
+  overflow: auto;
+  display: grid;
+  grid-template-rows: repeat(16, 1fr);
+  gap: 3px;
+}
+.diagnostics-left-table__body-content .rows>div, .diagnostics-right-table__body-content .rows>div {
+  border-radius: 5px;
+  background-color: var(--bg-white);
+}
+.diagnostics-left-table__head>div, .diagnostics-right-table__head>div {
+  min-width: max-content;
+  padding: 3px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: var(--bg-primary-2);
+  color: var(--bg-white);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .diagnostics .status-box-container {
+  grid-area: status-box-container;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .diagnostics .status-box-container .status-container .status-box {
+  padding: 10px;
+  margin-bottom: 1rem;
+  background-color: var(--bg-white);
+  color: var(--clr-muted);
+  border-radius: 5px;
+  box-shadow: var(--bs-10-10-20);
+  display: grid;
+  grid-template-rows: repeat(5, max-content);
+  row-gap: 0.5rem;
+}
+.main .diagnostics .status-box-container .status-container .status-box>div {
+  display: grid;
+  grid-template-columns: 75px 30px 30px;
+  gap: 0.5rem;
+  align-items: center;
+}
+.status-heading>span {
+  color: var(--clr-primary);
+  font-size: 11px;
+}
+.status-heading__status {
+  font-size: 16px !important;
+  font-weight: 600;
+}
+.status-sub-heading {
+  grid-column: 1/-1;
+}
+.main .diagnostics .status-box-container .status-container .status-box .na-button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--bg-white);
+  font-size: 11px;
+  text-align: center;
+  box-shadow: var(--bs-5-5-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main .diagnostics .diagnostics-left-table .diagnostics-left-table__buttons {
+  height: 40px;
+  width: 75px;
+  border-bottom-right-radius: 50px;
+  box-shadow: var(--bs-10-10-20);
+  background-color: var(--bg-success);
+  color: var(--clr-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main .diagnostics .diagnostics-right-table .diagnostics-right-table__buttons {
+  height: 40px;
+  display: flex;
+}
+.main .diagnostics .diagnostics-right-table .diagnostics-right-table__buttons div {
+  height: 40px;
+  width: 150px;
+  margin-left: -75px;
+  border-bottom-right-radius: 50px;
+  text-align: center;
+  background-color: var(--bg-white);
+  color: var(--clr-muted);
+  box-shadow: var(--bs-10-10-20);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.main .diagnostics .diagnostics-right-table .diagnostics-right-table__buttons div.active {
+  background-color: var(--bg-success);
+  color: var(--clr-dark);
+}
+.main .diagnostics .diagnostics-right-table .diagnostics-right-table__buttons div:first-child {
+  width: 75px;
+  grid-template-columns: 1fr;
+  margin-left: 0;
+  z-index: 4;
+}
+.main .diagnostics .diagnostics-right-table .diagnostics-right-table__buttons div:nth-child(2) {
+  z-index: 3;
+}
+.main .diagnostics .diagnostics-right-table .diagnostics-right-table__buttons div:nth-child(3) {
+  z-index: 2;
+}
+.main .diagnostics .diagnostics-right-table .diagnostics-right-table__buttons div:nth-child(4) {
+  z-index: 1;
+}
+
+/* Main > Diagnostics End */
+
+/* Main End */
+
+@media screen and (max-width:1024px) {
+  * {
+    font-size: 11px;
+  }
+  .sidebar {
+    width: 100px;
+  }
+  .main .maps-calibration .axis-table-control .axis-table .axis-table-display {
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 70px 1fr;
+  }
+  .main .maps-calibration .axis-table-control .axis-table .axis-table-buttons-group {
+    grid-template-columns: 70px 1fr;
+  }
+  .axis-sheet-control-buttons>* {
+    padding: 3px;
+  }
+}
+@media screen and (max-width:920px) {
+  * {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width:800px) {
+  * {
+    font-size: 10px;
+  }
+  .sidebar {
+    width: 90px;
+  }
+  .main .maps-calibration .axis-table-control .axis-table .axis-table-display {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 60px 1fr;
+  }
+
+  .main .maps-calibration .axis-table-control .axis-table .axis-table-buttons-group {
+    grid-template-columns: 60px 1fr;
+  }
+  .sheet-buttons>div:nth-child(1) {
+    width: 60px;
+    margin-left: 0;
+    padding-bottom: 10px;
+    grid-template-columns: 1fr;
+  }
+  .sheet-buttons>div {
+    width: 120px;
+    margin-left: -60px;
+    padding-right: 5px;
+    font-size: 9px;
+  }
+
+}
